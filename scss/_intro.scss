@@ -1,0 +1,80 @@
+.intro {
+    @include adaptiveValue("margin-bottom", 80, 40);
+}
+
+.body-intro {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+
+    // .body-intro__content
+    &__content {
+        background-color: #fff;
+        border-radius: 3px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .body-intro__title
+    &__title {
+        line-height: 120%;
+        margin-bottom: rem(30);
+
+        span {
+            color: $primary;
+        }
+    }
+
+    // .body-intro__qualities
+    &__qualities {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    // .body-intro__qualitites-item
+    &__qualitites-item {
+        color: $mainText;
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+
+        p {
+            padding-left: 20px;
+            line-height: 1;
+        }
+    }
+
+    // .body-intro__bottom
+    &__bottom {
+        margin-top: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .swiper-controls {
+            margin-top: auto;
+        }
+    }
+
+    // .body-intro__slider
+    &__slider {
+        border-radius: 3px;
+    }
+
+    // .body-intro__swiper
+    &__swiper {}
+
+    // .body-intro__slide
+    &__slide {}
+
+    // .body-intro__slide-img
+    &__slide-img {}
+}
+
+
+.border-top {}
+
+
+.border-bottom {}
