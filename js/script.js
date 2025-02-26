@@ -1,7 +1,7 @@
-// document.querySelector(".icon-menu").addEventListener("click", () => {
-//     document.body.classList.toggle("lock");
-//     document.body.classList.toggle("menu-open");
-// });
+document.querySelector(".icon-menu").addEventListener("click", () => {
+    document.body.classList.toggle("lock");
+    document.body.classList.toggle("menu-open");
+});
 
 // document.querySelectorAll('a[href^="#"').forEach((link) => {
 //     link.addEventListener("click", function (e) {

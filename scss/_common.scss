@@ -22,31 +22,32 @@ body {
 }
 
 .h1 {
-    font-size: rem(38);
+    @include adaptiveValue("font-size", 38, 28);
 }
 
 .h2 {
-    font-size: rem(32);
+    @include adaptiveValue("font-size", 32, 24);
 }
 
 .h3 {
-    font-size: rem(20);
+    @include adaptiveValue("font-size", 20, 18);
 }
 
 .h4 {
-    font-size: rem(18);
+    @include adaptiveValue("font-size", 18, 16);
 }
 
 .p1 {
-    font-size: rem(16);
+    @include adaptiveValue("font-size", 16, 14);
 }
 
 .p2 {
     font-size: rem(14);
+    @include adaptiveValue("font-size", 14, 12);
 }
 
 .p3 {
-    font-size: rem(18);
+    @include adaptiveValue("font-size", 18, 16);
 }
 
 .container {
@@ -72,7 +73,6 @@ body {
 }
 
 .button-main {
-    font-size: rem(16);
     padding: 0px 40px;
     background-color: $primary;
     transition: all 0.3s ease 0s;
@@ -83,6 +83,19 @@ body {
     justify-content: center;
     height: 60px;
     width: fit-content;
+    @include adaptiveValue("font-size", 16, 14);
+
+    @media (max-width: em(1150)) {
+        padding: 0px 30px;
+    }
+
+    @media (max-width:$mobile) {
+        padding: 0px 25px;
+    }
+
+    @media (max-width:$mobileSmall) {
+        padding: 0px 20px;
+    }
 
     @media (any-hover: hover) {
         &:hover {
