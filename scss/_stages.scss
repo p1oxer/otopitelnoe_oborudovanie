@@ -7,10 +7,20 @@
 .body-stages {
     display: flex;
     flex-direction: row;
-    @include adaptiveValue("gap", 130, 65);
+    @include adaptiveValue("gap", 130, 35, 1920, 767);
+
+    @media (max-width:$mobile) {
+        gap: 30px;
+        flex-direction: column;
+    }
 
     // .body-stages__content
-    &__content {}
+    &__content {
+        @media (max-width:$mobile) {
+            max-width: 500px;
+            margin: 0px auto;
+        }
+    }
 
     &__block-title {
         &:not(:last-child) {
@@ -33,6 +43,10 @@
             left: -45px;
             transition: all 0.3s ease 0s;
             transform: translate(50%, -50%);
+
+            @media (max-width:$mobileSmall) {
+                left: -35px;
+            }
         }
 
         &:not(:last-child) {
@@ -44,6 +58,27 @@
     &__item {
         position: relative;
         padding-left: 35px;
+        height: max-content;
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+
+            @media (max-width: em(1165)) {
+                margin-bottom: 20px;
+            }
+
+            @media (max-width:$mobile) {
+                margin-bottom: 30px;
+            }
+
+            @media (max-width: em(355)) {
+                margin-bottom: 15px;
+            }
+        }
+
+        @media (max-width:$mobileSmall) {
+            padding-left: 25px;
+        }
 
         &.active {
             .body-stages__title {
@@ -59,9 +94,7 @@
             }
         }
 
-        &:not(:last-child) {
-            @include adaptiveValue("margin-bottom", 30, 15);
-        }
+
     }
 
     // .body-stages__text
@@ -69,8 +102,16 @@
 
     // .body-stages__photo
     &__photo {
+        flex: 1 1 100%;
+        max-width: fit-content;
+
+        @media (max-width:$mobile) {
+            margin: 0px auto;
+        }
+
         img {
             border-radius: 3px;
+            max-width: 100%;
         }
     }
 
@@ -78,5 +119,17 @@
         position: absolute;
         left: 4px;
         top: 20px;
+
+        line {
+            transition: all 0.3s ease 0s;
+        }
+
+        @media (max-width:$tablet) {
+            top: 15px;
+        }
+
+        @media (max-width: em(353)) {
+            top: 25px;
+        }
     }
 }
