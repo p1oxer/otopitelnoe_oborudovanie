@@ -1050,7 +1050,7 @@ body {
 
 .body-services {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
 }
 @media (min-width: 75em) {
   .body-services {
@@ -1074,7 +1074,7 @@ body {
     gap: 0.9375rem;
   }
 }
-@media (max-width: 767.98px) {
+@media (max-width: 56.25em) {
   .body-services {
     display: flex;
     flex-direction: column;
@@ -1106,6 +1106,9 @@ body {
   .item-body-services {
     padding: 0.625rem;
   }
+}
+.item-body-services:nth-last-child(1):nth-child(odd) {
+  grid-column: span 2;
 }
 .item-body-services__top {
   display: flex;

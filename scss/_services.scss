@@ -2,10 +2,11 @@
 
 .body-services {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    // grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     @include adaptiveValue("gap", 30, 15);
 
-    @media (max-width:$mobile) {
+    @media (max-width:em(900)) {
         display: flex;
         flex-direction: column;
     }
@@ -16,9 +17,9 @@
     border-radius: 3px;
     @include adaptiveValue("padding", 20, 10);
 
-    // &:nth-last-child(1):nth-child(odd) {
-    //     grid-column: span 2;
-    // }
+    &:nth-last-child(1):nth-child(odd) {
+        grid-column: span 2;
+    }
 
     // .item-body-services__top
     &__top {
