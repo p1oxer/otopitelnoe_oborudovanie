@@ -1,0 +1,82 @@
+.stages {
+    background: linear-gradient(-135deg, $primary, #294390);
+    color: #fff;
+    @include adaptiveValue("padding-top", 100, 50);
+}
+
+.body-stages {
+    display: flex;
+    flex-direction: row;
+    @include adaptiveValue("gap", 130, 65);
+
+    // .body-stages__content
+    &__content {}
+
+    &__block-title {
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 40, 20);
+        }
+    }
+
+    // .body-stages__title
+    &__title {
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background-color: $strokeDark;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: -45px;
+            transition: all 0.3s ease 0s;
+            transform: translate(50%, -50%);
+        }
+
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 10, 5);
+        }
+    }
+
+    // .body-stages__item
+    &__item {
+        position: relative;
+        padding-left: 35px;
+
+        &.active {
+            .body-stages__title {
+                &::before {
+                    background-color: #fff;
+                }
+            }
+
+            .body-stages__item-line {
+                line {
+                    stroke: #fff;
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 30, 15);
+        }
+    }
+
+    // .body-stages__text
+    &__text {}
+
+    // .body-stages__photo
+    &__photo {
+        img {
+            border-radius: 3px;
+        }
+    }
+
+    &__item-line {
+        position: absolute;
+        left: 4px;
+        top: 20px;
+    }
+}
