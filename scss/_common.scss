@@ -42,7 +42,6 @@ body {
 }
 
 .p2 {
-    font-size: rem(14);
     @include adaptiveValue("font-size", 14, 12);
 }
 

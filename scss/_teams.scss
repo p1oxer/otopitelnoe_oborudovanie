@@ -1,0 +1,76 @@
+.teams {
+    @include adaptiveValue("padding-top", 100, 50);
+}
+
+
+.body-teams {
+    display: flex;
+    flex-direction: row;
+    @include adaptiveValue("gap", 130, 25, 1920, 320);
+    justify-content: start;
+
+    @media (max-width: em(420)) {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    // .body-teams__title
+    &__title {
+        flex-shrink: 0;
+        position: relative;
+
+        p {
+            position: sticky;
+            top: 30px;
+        }
+    }
+
+    &__inner {
+        flex-grow: 1;
+    }
+
+    // .body-teams__content
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        @include adaptiveValue("gap", 30, 15);
+    }
+
+    // .body-teams__item
+    &__item {}
+
+    // .body-teams__showmore
+    &__showmore {
+        color: $primary;
+        border-bottom: 1px dashed $primary;
+    }
+}
+
+
+.item-teams {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 3px;
+
+    // .item-teams__name
+    &__name {
+        margin-bottom: 5px;
+    }
+
+    // .item-teams__post
+    &__post {
+        color: $mainText;
+
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 30, 15);
+        }
+    }
+
+    // .item-teams__img
+    &__img {
+        img {
+            border-radius: 3px;
+            width: 100%;
+        }
+    }
+}
