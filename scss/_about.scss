@@ -1,0 +1,111 @@
+.body-about {
+    @include adaptiveValue("gap", 20, 10);
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width:$mobile) {
+        flex-direction: column-reverse;
+    }
+
+    // .body-about__carousel
+    &__carousel {
+        flex: 1 0 45%;
+        overflow: hidden;
+        max-width: 480px;
+        top: 0px;
+
+        @media (max-width:$mobile) {
+            margin: 0px auto;
+            flex: 1 1 auto;
+            width: 100%;
+        }
+    }
+
+    // .body-about__slider
+    &__slider {
+        @include adaptiveValue("margin-bottom", 20, 10);
+    }
+
+    // .body-about__swiper
+    &__swiper {}
+
+    // .body-about__slide
+    &__slide {
+        width: fit-content;
+
+        @media (max-width:$mobileSmall) {
+            max-width: 100%;
+        }
+    }
+
+    // .body-about__img
+    &__img {
+        max-width: 100%;
+        img {
+            border-radius: 3px;
+            max-width: 100%;
+            @media (max-width:$mobileSmall){
+            }
+        }
+    }
+
+    // .body-about__swiper-btn-prev
+    &__swiper-btn-prev {}
+
+    // .body-about__swiper-btn-next
+    &__swiper-btn-next {}
+
+    // .body-about__content
+    &__content {
+        background-color: #fff;
+        border-radius: 3px;
+        @include adaptiveValue("padding", 30, 15);
+    }
+
+    // .body-about__text
+    &__text {
+        @include adaptiveValue("padding-bottom", 40, 20);
+
+        p {
+            color: $mainText;
+
+            &:not(:last-child) {
+                @include adaptiveValue("margin-bottom", 20, 10);
+            }
+        }
+    }
+
+    // .body-about__stats
+    &__stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        @include adaptiveValue("gap", 20, 10);
+    }
+
+    // .body-about__stats-item
+    &__stats-item {
+        @include adaptiveValue("padding-top", 20, 10);
+        border-top: 1px solid $strokeLight;
+
+    }
+
+    // .body-about__stats-number
+    &__stats-number {
+        font-weight: 500;
+        @include adaptiveValue("font-size", 40, 30);
+    }
+
+    // .body-about__stats-text
+    &__stats-text {
+        color: $mainText;
+    }
+
+    .swiper-controls {
+        max-width: 470px;
+    }
+
+    .about-pagination {
+        justify-content: center;
+
+    }
+}

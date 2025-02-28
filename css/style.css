@@ -1497,3 +1497,243 @@ body {
     color: #183280;
   }
 }
+.body-about {
+  display: flex;
+  flex-direction: row;
+}
+@media (min-width: 75em) {
+  .body-about {
+    gap: 1.25rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 75em) {
+  @supports (gap: clamp( 0.625rem , 0.3977272727rem  +  1.1363636364vw , 1.25rem )) {
+    .body-about {
+      gap: clamp( 0.625rem , 0.3977272727rem  +  1.1363636364vw , 1.25rem );
+    }
+  }
+  @supports not (gap: clamp( 0.625rem , 0.3977272727rem  +  1.1363636364vw , 1.25rem )) {
+    .body-about {
+      gap: calc(0.625rem + 0.625 * (100vw - 20rem) / 55);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .body-about {
+    gap: 0.625rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .body-about {
+    flex-direction: column-reverse;
+  }
+}
+.body-about__carousel {
+  flex: 1 0 45%;
+  overflow: hidden;
+  max-width: 480px;
+  top: 0px;
+}
+@media (max-width: 767.98px) {
+  .body-about__carousel {
+    margin: 0px auto;
+    flex: 1 1 auto;
+    width: 100%;
+  }
+}
+@media (min-width: 75em) {
+  .body-about__slider {
+    margin-bottom: 1.25rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 75em) {
+  @supports (margin-bottom: clamp( 0.625rem , 0.3977272727rem  +  1.1363636364vw , 1.25rem )) {
+    .body-about__slider {
+      margin-bottom: clamp( 0.625rem , 0.3977272727rem  +  1.1363636364vw , 1.25rem );
+    }
+  }
+  @supports not (margin-bottom: clamp( 0.625rem , 0.3977272727rem  +  1.1363636364vw , 1.25rem )) {
+    .body-about__slider {
+      margin-bottom: calc(0.625rem + 0.625 * (100vw - 20rem) / 55);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .body-about__slider {
+    margin-bottom: 0.625rem;
+  }
+}
+.body-about__slide {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (max-width: 480.98px) {
+  .body-about__slide {
+    max-width: 100%;
+  }
+}
+.body-about__img {
+  max-width: 100%;
+}
+.body-about__img img {
+  border-radius: 3px;
+  max-width: 100%;
+}
+.body-about__content {
+  background-color: #fff;
+  border-radius: 3px;
+}
+@media (min-width: 75em) {
+  .body-about__content {
+    padding: 1.875rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 75em) {
+  @supports (padding: clamp( 0.9375rem , 0.5965909091rem  +  1.7045454545vw , 1.875rem )) {
+    .body-about__content {
+      padding: clamp( 0.9375rem , 0.5965909091rem  +  1.7045454545vw , 1.875rem );
+    }
+  }
+  @supports not (padding: clamp( 0.9375rem , 0.5965909091rem  +  1.7045454545vw , 1.875rem )) {
+    .body-about__content {
+      padding: calc(0.9375rem + 0.9375 * (100vw - 20rem) / 55);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .body-about__content {
+    padding: 0.9375rem;
+  }
+}
+@media (min-width: 75em) {
+  .body-about__text {
+    padding-bottom: 2.5rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 75em) {
+  @supports (padding-bottom: clamp( 1.25rem , 0.7954545455rem  +  2.2727272727vw , 2.5rem )) {
+    .body-about__text {
+      padding-bottom: clamp( 1.25rem , 0.7954545455rem  +  2.2727272727vw , 2.5rem );
+    }
+  }
+  @supports not (padding-bottom: clamp( 1.25rem , 0.7954545455rem  +  2.2727272727vw , 2.5rem )) {
+    .body-about__text {
+      padding-bottom: calc(1.25rem + 1.25 * (100vw - 20rem) / 55);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .body-about__text {
+    padding-bottom: 1.25rem;
+  }
+}
+.body-about__text p {
+  color: #717171;
+}
+@media (min-width: 75em) {
+  .body-about__text p:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 75em) {
+  @supports (margin-bottom: clamp( 0.625rem , 0.3977272727rem  +  1.1363636364vw , 1.25rem )) {
+    .body-about__text p:not(:last-child) {
+      margin-bottom: clamp( 0.625rem , 0.3977272727rem  +  1.1363636364vw , 1.25rem );
+    }
+  }
+  @supports not (margin-bottom: clamp( 0.625rem , 0.3977272727rem  +  1.1363636364vw , 1.25rem )) {
+    .body-about__text p:not(:last-child) {
+      margin-bottom: calc(0.625rem + 0.625 * (100vw - 20rem) / 55);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .body-about__text p:not(:last-child) {
+    margin-bottom: 0.625rem;
+  }
+}
+.body-about__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+@media (min-width: 75em) {
+  .body-about__stats {
+    gap: 1.25rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 75em) {
+  @supports (gap: clamp( 0.625rem , 0.3977272727rem  +  1.1363636364vw , 1.25rem )) {
+    .body-about__stats {
+      gap: clamp( 0.625rem , 0.3977272727rem  +  1.1363636364vw , 1.25rem );
+    }
+  }
+  @supports not (gap: clamp( 0.625rem , 0.3977272727rem  +  1.1363636364vw , 1.25rem )) {
+    .body-about__stats {
+      gap: calc(0.625rem + 0.625 * (100vw - 20rem) / 55);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .body-about__stats {
+    gap: 0.625rem;
+  }
+}
+.body-about__stats-item {
+  border-top: 1px solid #eee;
+}
+@media (min-width: 75em) {
+  .body-about__stats-item {
+    padding-top: 1.25rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 75em) {
+  @supports (padding-top: clamp( 0.625rem , 0.3977272727rem  +  1.1363636364vw , 1.25rem )) {
+    .body-about__stats-item {
+      padding-top: clamp( 0.625rem , 0.3977272727rem  +  1.1363636364vw , 1.25rem );
+    }
+  }
+  @supports not (padding-top: clamp( 0.625rem , 0.3977272727rem  +  1.1363636364vw , 1.25rem )) {
+    .body-about__stats-item {
+      padding-top: calc(0.625rem + 0.625 * (100vw - 20rem) / 55);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .body-about__stats-item {
+    padding-top: 0.625rem;
+  }
+}
+.body-about__stats-number {
+  font-weight: 500;
+}
+@media (min-width: 75em) {
+  .body-about__stats-number {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 75em) {
+  @supports (font-size: clamp( 1.875rem , 1.6477272727rem  +  1.1363636364vw , 2.5rem )) {
+    .body-about__stats-number {
+      font-size: clamp( 1.875rem , 1.6477272727rem  +  1.1363636364vw , 2.5rem );
+    }
+  }
+  @supports not (font-size: clamp( 1.875rem , 1.6477272727rem  +  1.1363636364vw , 2.5rem )) {
+    .body-about__stats-number {
+      font-size: calc(1.875rem + 0.625 * (100vw - 20rem) / 55);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .body-about__stats-number {
+    font-size: 1.875rem;
+  }
+}
+.body-about__stats-text {
+  color: #717171;
+}
+.body-about .swiper-controls {
+  max-width: 470px;
+}
+.body-about .about-pagination {
+  justify-content: center;
+}
