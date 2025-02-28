@@ -1,0 +1,85 @@
+.footer {
+    background-color: #fff;
+}
+
+
+.body-footer {
+    @include adaptiveValue("padding-top", 60, 30);
+    @include adaptiveValue("padding-bottom", 60, 30);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    @media (max-width:$mobileSmall) {
+        justify-content: center;
+    }
+
+    // .body-footer__logo
+    &__logo {
+        font-weight: 500;
+        color: $primary;
+        @include adaptiveValue("font-size", 20, 18);
+    }
+
+    // .body-footer__contacts
+    &__contacts {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        @include adaptiveValue("gap", 30, 15);
+    }
+
+    // .body-footer__socials
+    &__socials {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        @include adaptiveValue("gap", 20, 10);
+    }
+}
+
+.bottom-footer {
+    padding: 15px 0 20px 0;
+    border-top: 1px solid $strokeLight;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: $mainText;
+
+    @media (max-width:$tablet) {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    // .bottom-footer__policy
+    &__policy {
+        a {
+            text-decoration-skip-ink: none;
+            text-decoration: underline;
+        }
+    }
+
+    // .bottom-footer__grampus
+    &__grampus {
+        a {
+            font-family: Raleway;
+            font-weight: 900;
+            @include adaptiveValue("font-size", 22, 18);
+            transition: all 0.3s ease 0s;
+            @include adaptiveValue("margin-left", 18, 9);
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    // .bottom-footer__copyright
+    &__copyright {}
+}
