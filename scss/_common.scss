@@ -75,8 +75,8 @@ body {
 .button-main {
     padding: 0px 40px;
     background-color: $primary;
-    transition: all 0.3s ease 0s;
     color: #fff;
+    transition: all 0.3s ease 0s;
     border-radius: 3px;
     display: flex;
     align-items: center;
@@ -84,6 +84,7 @@ body {
     height: 60px;
     width: fit-content;
     @include adaptiveValue("font-size", 16, 14);
+    cursor: pointer;
 
     @media (max-width: em(1150)) {
         padding: 0px 30px;
@@ -110,6 +111,19 @@ body {
         @media (any-hover: hover) {
             &:hover {
                 background-color: #E8EBF2;
+            }
+        }
+    }
+
+    &.bordered {
+        background-color: #fff;
+        color: $primary;
+        border: 1px solid $primary;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $primary;
+                color: #fff;
             }
         }
     }
@@ -192,4 +206,12 @@ body {
 
 .swiper-button-lock {
     display: none !important;
+}
+
+.block-title {
+    @include adaptiveValue("margin-bottom", 40, 20);
+
+    span {
+        color: $primary;
+    }
 }
