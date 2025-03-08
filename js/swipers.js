@@ -48,3 +48,26 @@ const reviewsSwiper = new Swiper(".reviews__slider", {
         },
     },
 });
+const worksSwiper = new Swiper(".works__slider", {
+    slidesPerView: 2,
+    navigation: {
+        prevEl: ".works__swiper-btn-prev",
+        nextEl: ".works__swiper-btn-next",
+    },
+
+    pagination: {
+        el: ".works-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        600: {
+            spaceBetween: 15,
+        },
+        992: {
+            spaceBetween: 30,
+        },
+    },
+});
