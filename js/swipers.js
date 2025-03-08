@@ -24,3 +24,27 @@ const aboutSwiper = new Swiper(".body-about__slider", {
         clickable: true,
     },
 });
+
+const reviewsSwiper = new Swiper(".reviews__slider", {
+    slidesPerView: 2,
+    navigation: {
+        prevEl: ".reviews__swiper-btn-prev",
+        nextEl: ".reviews__swiper-btn-next",
+    },
+
+    pagination: {
+        el: ".reviews-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        767: {
+            spaceBetween: 15,
+        },
+        992: {
+            spaceBetween: 30,
+        },
+    },
+});
