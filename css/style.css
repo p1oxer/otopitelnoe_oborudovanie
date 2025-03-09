@@ -2652,3 +2652,105 @@ body {
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
 }
+
+.body-contacts {
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 37.5em) {
+  .body-contacts {
+    flex-direction: column;
+  }
+}
+.body-contacts__item {
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 37.5em) {
+  .body-contacts__item {
+    height: 212px;
+    width: 33%;
+  }
+}
+@media (min-width: 37.5em) {
+  .body-contacts__item:not(:last-child) {
+    border-right: 1px solid #eee;
+  }
+}
+@media (max-width: 37.5em) {
+  .body-contacts__item:not(:last-child) {
+    padding-bottom: 15px;
+  }
+}
+@media (max-width: 480.98px) {
+  .body-contacts__item:not(:last-child) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.body-contacts__item:not(:first-child) {
+  padding: 15px 30px;
+}
+@media (max-width: 991.98px) {
+  .body-contacts__item:not(:first-child) {
+    padding: 0 15px;
+  }
+}
+@media (max-width: 37.5em) {
+  .body-contacts__item:not(:first-child) {
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    padding-bottom: 15px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (max-width: 37.5em) {
+  .body-contacts__item:last-child {
+    padding-bottom: 0px;
+  }
+}
+@media (max-width: 991.98px) {
+  .body-contacts__item {
+    padding: 0 15px;
+  }
+}
+@media (max-width: 37.5em) {
+  .body-contacts__item {
+    border-right: 0px;
+  }
+}
+.body-contacts__name {
+  flex: 1 1 auto;
+  color: #717171;
+}
+@media (max-width: 37.5em) {
+  .body-contacts__name {
+    margin-bottom: 30px;
+  }
+}
+.body-contacts__link {
+  color: #183280;
+  margin-bottom: 10px;
+  display: block;
+}
+.body-contacts__link span {
+  color: #181818;
+}
+.body-contacts__text {
+  color: #717171;
+}
+.body-contacts__socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+.body-contacts__socials img {
+  height: 24px;
+}

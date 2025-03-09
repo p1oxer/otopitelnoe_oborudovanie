@@ -1,0 +1,109 @@
+.body-contacts {
+    padding: 20px 0;
+    border-top: 1px solid $strokeLight;
+    border-bottom: 1px solid $strokeLight;
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: em(600)) {
+        flex-direction: column;
+    }
+
+    // .body-contacts__item
+    &__item {
+        padding: 15px 0;
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width:$mobileSmall) {}
+
+        @media (min-width:em(600)) {
+            height: 212px;
+            width: 33%;
+        }
+
+        &:not(:last-child) {
+            @media (min-width:em(600)) {
+                border-right: 1px solid $strokeLight;
+            }
+
+            @media (max-width: em(600)) {
+                padding-bottom: 15px;
+            }
+
+            @media (max-width:$mobileSmall) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+
+        &:not(:first-child) {
+            padding: 15px 30px;
+
+            @media (max-width:$tablet) {
+                padding: 0 15px;
+            }
+
+            @media (max-width: em(600)) {
+                padding-top: 15px;
+                border-top: 1px solid $strokeLight;
+                padding-bottom: 15px;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+
+        &:last-child {
+            @media (max-width: em(600)) {
+                padding-bottom: 0px;
+            }
+        }
+
+        @media (max-width:$tablet) {
+            padding: 0 15px;
+        }
+
+        @media (max-width: em(600)) {
+            border-right: 0px;
+        }
+    }
+
+    // .body-contacts__name
+    &__name {
+        flex: 1 1 auto;
+        color: $mainText;
+
+        @media (max-width: em(600)) {
+            margin-bottom: 30px;
+        }
+    }
+
+    // .body-contacts__link
+    &__link {
+        color: $primary;
+        margin-bottom: 10px;
+        display: block;
+
+        span {
+            color: $head;
+        }
+    }
+
+    // .body-contacts__text
+    &__text {
+        color: $mainText;
+    }
+
+    // .body-contacts__socials
+    &__socials {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 10px;
+
+        img {
+            height: 24px;
+        }
+    }
+}
