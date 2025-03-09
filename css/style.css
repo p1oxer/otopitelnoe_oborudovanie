@@ -1254,15 +1254,15 @@ body {
 .item-body-services__attribute {
   display: flex;
   flex-direction: row;
-  align-items: center;
   gap: 12px;
   color: #717171;
 }
 .item-body-services__attribute::before {
+  transform: translate(0px, 8px);
   content: "";
   border-radius: 1px;
   height: 2px;
-  width: 12px;
+  min-width: 12px;
   background-color: #183280;
 }
 .item-body-services__button {
@@ -2031,6 +2031,9 @@ body {
   padding: 15px;
   border-radius: 3px;
 }
+.item-teams.hidden {
+  display: none;
+}
 .item-teams__name {
   margin-bottom: 5px;
 }
@@ -2417,6 +2420,7 @@ body {
 .body-sertificates__buttons-item {
   text-align: left;
   border-bottom: 1px solid #eee;
+  transition: all 0.3s ease 0s;
 }
 @media (min-width: 75em) {
   .body-sertificates__buttons-item {
@@ -2446,8 +2450,12 @@ body {
 .body-sertificates__buttons-item.active .body-sertificates__name {
   color: #000;
 }
+.body-sertificates__buttons-item.hidden {
+  display: none;
+}
 .body-sertificates__name {
   margin-bottom: 5px;
+  transition: all 0.3s ease 0s;
   color: #717171;
 }
 .body-sertificates__date {
@@ -2483,6 +2491,11 @@ body {
   margin-top: 20px;
   max-width: -moz-fit-content;
   max-width: fit-content;
+}
+@media (any-hover: hover) {
+  .body-sertificates__showmore:hover {
+    color: #717171;
+  }
 }
 
 .request {
@@ -2642,10 +2655,23 @@ body {
 .input::placeholder {
   color: #566AA8;
 }
+@media (max-width: 767.98px) {
+  .input {
+    padding: 8px 10px;
+    font-size: 0.875rem;
+  }
+}
 
 .privacy-policy {
   margin: 0.9375rem 0;
-  max-width: 340px;
+  max-width: 280px;
+  position: relative;
+  padding-left: 7px;
+}
+.privacy-policy::before {
+  content: "*";
+  position: absolute;
+  left: 0px;
 }
 .privacy-policy a {
   text-decoration: underline;

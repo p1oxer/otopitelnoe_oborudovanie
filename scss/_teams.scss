@@ -52,7 +52,9 @@
     background-color: #fff;
     padding: 15px;
     border-radius: 3px;
-
+    &.hidden {
+        display: none;
+    }
     // .item-teams__name
     &__name {
         margin-bottom: 5px;

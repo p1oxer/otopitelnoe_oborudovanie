@@ -101,15 +101,15 @@
     &__attribute {
         display: flex;
         flex-direction: row;
-        align-items: center;
         gap: 12px;
         color: $mainText;
 
         &::before {
+            transform: translate(0px, 8px);
             content: '';
             border-radius: 1px;
             height: 2px;
-            width: 12px;
+            min-width: 12px;
             background-color: $primary;
         }
     }

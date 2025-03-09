@@ -86,11 +86,24 @@
     &::placeholder {
         color: $strokeDark;
     }
+
+    @media (max-width:$mobile) {
+        padding: 8px 10px;
+        font-size: rem(14);
+    }
 }
 
 .privacy-policy {
     margin: rem(15) 0;
-    max-width: 340px;
+    max-width: 280px;
+    position: relative;
+    padding-left: 7px;
+
+    &::before {
+        content: '*';
+        position: absolute;
+        left: 0px;
+    }
 
     a {
         text-decoration: underline;

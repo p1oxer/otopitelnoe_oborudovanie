@@ -80,3 +80,31 @@ if (tabButtons && tabContents) {
         });
     });
 }
+
+// showmore
+
+const certificatesShowMore = document.querySelector(".body-sertificates__showmore");
+const teamsShowMore = document.querySelector(".body-teams__showmore");
+
+const hiddenElementsCertificates = document.querySelectorAll(
+    ".body-sertificates__buttons-item.hidden"
+);
+const hiddenElementsTeams = document.querySelectorAll(".item-teams.hidden");
+
+function showMore(elementList, event) {
+    const isHidden = elementList[0].classList.contains("hidden");
+
+    elementList.forEach((element) => {
+        element.classList.toggle("hidden");
+    });
+
+    event.target.textContent = isHidden ? "Скрыть" : "Показать ещё";
+}
+
+certificatesShowMore.addEventListener("click", function (event) {
+    showMore(hiddenElementsCertificates, event);
+});
+
+teamsShowMore.addEventListener("click", function (event) {
+    showMore(hiddenElementsTeams, event);
+});

@@ -30,6 +30,7 @@
         @include adaptiveValue("padding-bottom", 20, 10);
         text-align: left;
         border-bottom: 1px solid $strokeLight;
+        transition: all 0.3s ease 0s;
 
         &.active {
             border-bottom: 1px solid $primary;
@@ -38,11 +39,16 @@
                 color: #000;
             }
         }
+        &.hidden {
+            display: none;
+            
+        }
     }
 
     // .body-sertificates__name
     &__name {
         margin-bottom: 5px;
+        transition: all 0.3s ease 0s;
         color: $mainText;
     }
 
@@ -86,5 +92,11 @@
         border-bottom: 1px dashed $primary;
         margin-top: 20px;
         max-width: fit-content;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $mainText;
+            }
+        }
     }
 }
