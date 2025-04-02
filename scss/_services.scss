@@ -2,10 +2,8 @@
 
 .body-services {
     display: grid;
-    // grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     grid-template-columns: repeat(2, 1fr);
     @include adaptiveValue("gap", 30, 15);
-    // align-items: stretch;
 
     @media (max-width:em(900)) {
         display: flex;
@@ -17,7 +15,9 @@
     background-color: #fff;
     border-radius: 3px;
     @include adaptiveValue("padding", 20, 10);
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     &:nth-last-child(1):nth-child(odd) {
         grid-column: span 2;
     }
@@ -31,17 +31,21 @@
 
                     img {
                         width: 100%;
-
                     }
-                }
-
-                @media (max-width:$mobile) {
-                    min-width: 30%;
-                    max-width: 30%;
                 }
             }
         }
+    }
 
+    @media (max-width:$tablet) and (min-width:900px) {
+        .item-body-services__photo {
+            min-width: 40%;
+            max-width: 40%;
+
+            img {
+                width: 100%;
+            }
+        }
     }
 
     &:last-child {
@@ -74,7 +78,6 @@
         flex-direction: row;
         justify-content: space-between;
         @include adaptiveValue("gap", 30, 10);
-
         min-height: 70px;
 
         @media (max-width:$mobileSmall) {
@@ -105,7 +108,7 @@
         p {
             position: relative;
             z-index: 2;
-
+            @include adaptiveValue("font-size", 16, 14);
             &::before {
                 position: absolute;
                 z-index: -1;
@@ -125,6 +128,7 @@
         border-bottom: 1px dashed $primary;
         width: fit-content;
         cursor: pointer;
+        @include adaptiveValue("font-size", 14, 12);
     }
 
     // .item-body-services__inner
@@ -159,6 +163,7 @@
         flex-direction: row;
         gap: 12px;
         color: $mainText;
+        @include adaptiveValue("font-size", 16, 12);
 
         &::before {
             transform: translate(0px, 8px);
@@ -187,10 +192,6 @@
 
         @media (min-width:em(1200)) {
             min-width: 224px;
-        }
-
-        @media (max-width:$mobileSmall) {
-            text-align: center;
         }
 
         img {

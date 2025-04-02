@@ -440,6 +440,125 @@ body {
   color: #183280;
 }
 
+.modal {
+  display: none;
+  max-width: 540px;
+  position: relative;
+}
+.modal .privacy-policy {
+  max-width: 100%;
+}
+.modal button {
+  width: 100%;
+}
+
+.fancybox__content {
+  border-radius: 3px;
+  color: #717171;
+}
+@media (min-width: 75em) {
+  .fancybox__content {
+    padding: 2.5rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 75em) {
+  @supports (padding: clamp( 1.25rem , 0.7954545455rem  +  2.2727272727vw , 2.5rem )) {
+    .fancybox__content {
+      padding: clamp( 1.25rem , 0.7954545455rem  +  2.2727272727vw , 2.5rem );
+    }
+  }
+  @supports not (padding: clamp( 1.25rem , 0.7954545455rem  +  2.2727272727vw , 2.5rem )) {
+    .fancybox__content {
+      padding: calc(1.25rem + 1.25 * (100vw - 20rem) / 55);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .fancybox__content {
+    padding: 1.25rem;
+  }
+}
+@media (min-width: 75em) {
+  .fancybox__content {
+    padding-top: 2.5rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 75em) {
+  @supports (padding-top: clamp( 2.5rem , 2.5rem  +  0vw , 2.5rem )) {
+    .fancybox__content {
+      padding-top: clamp( 2.5rem , 2.5rem  +  0vw , 2.5rem );
+    }
+  }
+  @supports not (padding-top: clamp( 2.5rem , 2.5rem  +  0vw , 2.5rem )) {
+    .fancybox__content {
+      padding-top: calc(2.5rem + 0 * (100vw - 20rem) / 55);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .fancybox__content {
+    padding-top: 2.5rem;
+  }
+}
+.fancybox__content input {
+  border-color: #eee;
+  color: #717171;
+  width: 100%;
+}
+.fancybox__content input::-moz-placeholder {
+  color: #717171;
+}
+.fancybox__content input::placeholder {
+  color: #717171;
+}
+.fancybox__content input:focus {
+  color: #183280;
+  border: 1px solid #183280;
+}
+
+.modal__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.modal__title {
+  color: #000;
+  text-align: center;
+}
+@media (min-width: 75em) {
+  .modal__title {
+    margin-bottom: 2.5rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 75em) {
+  @supports (margin-bottom: clamp( 1.25rem , 0.7954545455rem  +  2.2727272727vw , 2.5rem )) {
+    .modal__title {
+      margin-bottom: clamp( 1.25rem , 0.7954545455rem  +  2.2727272727vw , 2.5rem );
+    }
+  }
+  @supports not (margin-bottom: clamp( 1.25rem , 0.7954545455rem  +  2.2727272727vw , 2.5rem )) {
+    .modal__title {
+      margin-bottom: calc(1.25rem + 1.25 * (100vw - 20rem) / 55);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .modal__title {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.modal__text {
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.fancybox__backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
 .header {
   margin: 20px 0;
 }
@@ -1148,6 +1267,9 @@ body {
 .item-body-services {
   background-color: #fff;
   border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 @media (min-width: 75em) {
   .item-body-services {
@@ -1183,10 +1305,13 @@ body {
     width: 100%;
   }
 }
-@media (min-width: 991.98px) and (max-width: 767.98px) {
-  .item-body-services:not(:last-child) .item-body-services__photo {
-    min-width: 30%;
-    max-width: 30%;
+@media (max-width: 991.98px) and (min-width: 900px) {
+  .item-body-services .item-body-services__photo {
+    min-width: 40%;
+    max-width: 40%;
+  }
+  .item-body-services .item-body-services__photo img {
+    width: 100%;
   }
 }
 .item-body-services:last-child .item-body-services__top {
@@ -1280,6 +1405,28 @@ body {
   position: relative;
   z-index: 2;
 }
+@media (min-width: 75em) {
+  .item-body-services__price p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 75em) {
+  @supports (font-size: clamp( 0.875rem , 0.8295454545rem  +  0.2272727273vw , 1rem )) {
+    .item-body-services__price p {
+      font-size: clamp( 0.875rem , 0.8295454545rem  +  0.2272727273vw , 1rem );
+    }
+  }
+  @supports not (font-size: clamp( 0.875rem , 0.8295454545rem  +  0.2272727273vw , 1rem )) {
+    .item-body-services__price p {
+      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 55);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .item-body-services__price p {
+    font-size: 0.875rem;
+  }
+}
 .item-body-services__price p::before {
   position: absolute;
   z-index: -1;
@@ -1296,6 +1443,28 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
+}
+@media (min-width: 75em) {
+  .item-body-services__showmore {
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 75em) {
+  @supports (font-size: clamp( 0.75rem , 0.7045454545rem  +  0.2272727273vw , 0.875rem )) {
+    .item-body-services__showmore {
+      font-size: clamp( 0.75rem , 0.7045454545rem  +  0.2272727273vw , 0.875rem );
+    }
+  }
+  @supports not (font-size: clamp( 0.75rem , 0.7045454545rem  +  0.2272727273vw , 0.875rem )) {
+    .item-body-services__showmore {
+      font-size: calc(0.75rem + 0.125 * (100vw - 20rem) / 55);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .item-body-services__showmore {
+    font-size: 0.75rem;
+  }
 }
 .item-body-services__inner {
   display: flex;
@@ -1366,6 +1535,28 @@ body {
   gap: 12px;
   color: #717171;
 }
+@media (min-width: 75em) {
+  .item-body-services__attribute {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 75em) {
+  @supports (font-size: clamp( 0.75rem , 0.6590909091rem  +  0.4545454545vw , 1rem )) {
+    .item-body-services__attribute {
+      font-size: clamp( 0.75rem , 0.6590909091rem  +  0.4545454545vw , 1rem );
+    }
+  }
+  @supports not (font-size: clamp( 0.75rem , 0.6590909091rem  +  0.4545454545vw , 1rem )) {
+    .item-body-services__attribute {
+      font-size: calc(0.75rem + 0.25 * (100vw - 20rem) / 55);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .item-body-services__attribute {
+    font-size: 0.75rem;
+  }
+}
 .item-body-services__attribute::before {
   transform: translate(0px, 8px);
   content: "";
@@ -1388,11 +1579,6 @@ body {
 @media (min-width: 75em) {
   .item-body-services__photo {
     min-width: 224px;
-  }
-}
-@media (max-width: 480.98px) {
-  .item-body-services__photo {
-    text-align: center;
   }
 }
 .item-body-services__photo img {

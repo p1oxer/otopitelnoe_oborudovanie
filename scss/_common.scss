@@ -214,3 +214,61 @@ body {
         color: $primary;
     }
 }
+
+.modal {
+    display: none;
+    max-width: 540px;
+    position: relative;
+
+    .privacy-policy {
+        max-width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+.fancybox__content {
+    @include adaptiveValue("padding", 40, 20);
+    @include adaptiveValue("padding-top", 40, 40);
+    border-radius: 3px;
+    color: $mainText;
+
+    input {
+        border-color: $strokeLight;
+        color: $mainText;
+        width: 100%;
+
+        &::placeholder {
+            color: $mainText;
+        }
+
+        &:focus {
+            color: $primary;
+            border: 1px solid $primary;
+        }
+    }
+}
+
+.modal__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.modal__title {
+    color: #000;
+    text-align: center;
+    @include adaptiveValue("margin-bottom", 40, 20);
+}
+
+.modal__text {
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.fancybox__backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}

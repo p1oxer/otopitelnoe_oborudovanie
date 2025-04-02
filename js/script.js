@@ -143,3 +143,64 @@ window.onclick = function (event) {
         }
     }
 };
+
+// modals =====
+
+const modalCallButtons = document.querySelectorAll(".modal-call-open");
+const modalCall = document.querySelector(".modal-call");
+
+modalCallButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        new Fancybox(
+            [
+                {
+                    src: modalCall,
+                    type: "html",
+                },
+            ],
+            {
+                closeButton: false,
+                hideScrollbar: false,
+            }
+        );
+    });
+});
+
+const modalButtons = document.querySelectorAll(".modal-open");
+const modal = document.querySelector(".modal-request");
+
+modalButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        new Fancybox(
+            [
+                {
+                    src: modal,
+                    type: "html",
+                },
+            ],
+            {
+                closeButton: false,
+                hideScrollbar: false,
+            }
+        );
+    });
+});
+
+const modalDoneButtons = document.querySelectorAll(".next-popup");
+const modalDone = document.querySelector(".modal-done");
+modalDoneButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        new Fancybox(
+            [
+                {
+                    src: modalDone,
+                    type: "html",
+                },
+            ],
+            {
+                closeButton: false,
+                hideScrollbar: false,
+            }
+        );
+    });
+});

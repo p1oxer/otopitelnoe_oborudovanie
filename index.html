@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Отопительное оборудование</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -59,7 +60,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="body-header__button button-main">Обратный звонок</button>
+                    <button class="body-header__button button-main modal-call-open">Обратный звонок</button>
                     <div class="header__menu menu">
                         <button type="button" class="menu__icon icon-menu"><span></span></button>
                         <nav class="menu__body">
@@ -126,7 +127,7 @@
                                 </div>
                             </div>
                             <div class="body-intro__bottom">
-                                <button type="button" class="button-main">Оставить заявку</button>
+                                <button type="button" class="button-main modal-open">Оставить заявку</button>
                                 <div class="swiper-controls">
                                     <button class="body-intro__swiper-btn-prev swiper-btn-prev swiper-btn" type="button">
                                         <svg width="30" height="15" viewBox="0 0 30 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -941,7 +942,7 @@
                                 <input autocomplete="off" id="tel" type="phone" placeholder="+7 (___)___-__-__" class="input">
                             </div>
                             <p class="privacy-policy p2">Нажимая на кнопку, Вы соглашаетесь <br><a href="#"> на обработку персональных данных</a></p>
-                            <button type="submit" class="button-main inversed">Отправить</button>
+                            <button type="button" class="button-main inversed next-popup">Отправить</button>
                         </form>
                     </div>
                 </div>
@@ -1001,7 +1002,7 @@
                                 <img src="img/icons/whatsapp.svg" alt="">
                             </a>
                         </div>
-                        <button type="button" class="body-footer__button button-main">Обратный звонок</button>
+                        <button type="button" class="body-footer__button button-main modal-call-open">Обратный звонок</button>
                     </div>
                 </div>
                 <div class="footer__bottom bottom-footer">
@@ -1012,14 +1013,97 @@
                     <div class="bottom-footer__copyright p2">© 2024. ООО «Отопительное оборудование»</div>
                 </div>
             </div>
-
         </footer>
+        <div class="modal modal-call">
+            <div class="modal__body">
+                <div data-fancybox-close class="modal__close">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_142_1725)">
+                            <path d="M11.6126 2.07206C12.0785 1.60622 12.0785 0.849702 11.6126 0.383864C11.1468 -0.0819748 10.3903 -0.0819748 9.92442 0.383864L6.0002 4.31181L2.07225 0.38759C1.60641 -0.0782481 0.849885 -0.0782481 0.384047 0.38759C-0.0817917 0.853429 -0.0817917 1.60995 0.384047 2.07579L4.312 6.00001L0.387774 9.92796C-0.0780649 10.3938 -0.0780649 11.1503 0.387774 11.6162C0.853612 12.082 1.61013 12.082 2.07597 11.6162L6.0002 7.68821L9.92815 11.6124C10.394 12.0783 11.1505 12.0783 11.6163 11.6124C12.0822 11.1466 12.0822 10.3901 11.6163 9.92424L7.6884 6.00001L11.6126 2.07206Z" fill="#717171" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_142_1725">
+                                <rect width="12" height="12" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </div>
+                <p class="modal__title h2">Заказать обратный звонок</p>
+                <form class="body-request__form">
+                    <div class="input-box">
+                        <label class="p2" for="name">Имя</label>
+                        <input autocomplete="off" id="name" type="text" placeholder="Ваше имя" class="input">
+                    </div>
+                    <div class="input-box">
+                        <label class="p2" for="tel">Номер телефона*</label>
+                        <input autocomplete="off" id="tel" type="phone" placeholder="+7 (___)___-__-__" class="input">
+                    </div>
+                    <p class="privacy-policy p2"><span>Нажимая на кнопку, Вы соглашаетесь </span><a href="#"> на обработку персональных данных</a></p>
+                    <button data-fancybox-close type="button" class="button-main next-popup">Отправить</button>
+                </form>
+            </div>
+        </div>
+        <div class="modal modal-request">
+            <div class="modal__body">
+                <div data-fancybox-close class="modal__close">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_142_1725)">
+                            <path d="M11.6126 2.07206C12.0785 1.60622 12.0785 0.849702 11.6126 0.383864C11.1468 -0.0819748 10.3903 -0.0819748 9.92442 0.383864L6.0002 4.31181L2.07225 0.38759C1.60641 -0.0782481 0.849885 -0.0782481 0.384047 0.38759C-0.0817917 0.853429 -0.0817917 1.60995 0.384047 2.07579L4.312 6.00001L0.387774 9.92796C-0.0780649 10.3938 -0.0780649 11.1503 0.387774 11.6162C0.853612 12.082 1.61013 12.082 2.07597 11.6162L6.0002 7.68821L9.92815 11.6124C10.394 12.0783 11.1505 12.0783 11.6163 11.6124C12.0822 11.1466 12.0822 10.3901 11.6163 9.92424L7.6884 6.00001L11.6126 2.07206Z" fill="#717171" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_142_1725">
+                                <rect width="12" height="12" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <p class="modal__title h2">Оформить заявку</p>
+                <form class="body-request__form">
+                    <div class="input-box">
+                        <label class="p2" for="name">Имя</label>
+                        <input autocomplete="off" id="name" type="text" placeholder="Ваше имя" class="input">
+                    </div>
+                    <div class="input-box">
+                        <label class="p2" for="tel">Номер телефона*</label>
+                        <input autocomplete="off" id="tel" type="phone" placeholder="+7 (___)___-__-__" class="input">
+                    </div>
+                    <div class="input-box">
+                        <label class="p2" for="email">E-mail</label>
+                        <input autocomplete="off" id="email" type="email" placeholder="example@gmail.com" class="input">
+                    </div>
+                    <p class="privacy-policy p2"><span>Нажимая на кнопку, Вы соглашаетесь </span><a href="#"> на обработку персональных данных</a></p>
+                    <button data-fancybox-close type="button" class="button-main next-popup">Отправить</button>
+                </form>
+            </div>
+        </div>
+        <div class="modal modal-done">
+            <div class="modal__body">
+                <div data-fancybox-close class="modal__close">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_142_1725)">
+                            <path d="M11.6126 2.07206C12.0785 1.60622 12.0785 0.849702 11.6126 0.383864C11.1468 -0.0819748 10.3903 -0.0819748 9.92442 0.383864L6.0002 4.31181L2.07225 0.38759C1.60641 -0.0782481 0.849885 -0.0782481 0.384047 0.38759C-0.0817917 0.853429 -0.0817917 1.60995 0.384047 2.07579L4.312 6.00001L0.387774 9.92796C-0.0780649 10.3938 -0.0780649 11.1503 0.387774 11.6162C0.853612 12.082 1.61013 12.082 2.07597 11.6162L6.0002 7.68821L9.92815 11.6124C10.394 12.0783 11.1505 12.0783 11.6163 11.6124C12.0822 11.1466 12.0822 10.3901 11.6163 9.92424L7.6884 6.00001L11.6126 2.07206Z" fill="#717171" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_142_1725">
+                                <rect width="12" height="12" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <p class="modal__title h2">Успешно отправлено!</p>
+                <p class="modal__text p1">Наш специалист перезвонит Вам на указанный номер в течение 15 минут.</p>
+                <button data-fancybox-close type="button" class="button-main">Закрыть</button>
+
+            </div>
+        </div>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 <script src="js/script.js"></script>
 <script src="js/swipers.js"></script>
 
 </html>
 
-<!-- todo: popups, showmore доделать услуги :( -->
+<!-- todo: popups-->
