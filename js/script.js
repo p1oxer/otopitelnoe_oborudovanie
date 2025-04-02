@@ -1,8 +1,33 @@
+// header ========
 document.querySelector(".icon-menu").addEventListener("click", () => {
     document.body.classList.toggle("lock");
     document.body.classList.toggle("menu-open");
 });
+document.querySelector(".menu-icon-close").addEventListener("click", () => {
+    document.body.classList.remove("lock");
+    document.body.classList.remove("menu-open");
+});
+//scrollTo =========
+document.querySelectorAll('a[href^="#"').forEach((link) => {
+    link.addEventListener("click", function (e) {
+        e.preventDefault();
 
+        let href = this.getAttribute("href").substring(1);
+
+        const scrollTarget = document.getElementById(href);
+
+        const topOffset = 30;
+        const elementPosition = scrollTarget.getBoundingClientRect().top;
+        const offsetPosition = elementPosition - topOffset;
+
+        window.scrollBy({
+            top: offsetPosition,
+            behavior: "smooth",
+        });
+    });
+});
+
+// stages ==============
 const stages = document.querySelectorAll(".body-stages__item");
 function activateStages() {
     stages.forEach((stage, index) => {
@@ -20,45 +45,24 @@ function activateStages() {
 activateStages();
 
 function equalizeHeights() {
-    const elements = stages; // Получаем все блоки
+    const elements = stages;
     let maxHeight = 0;
 
-    // 1. Сбрасываем высоту (на случай, если уже применяли)
     elements.forEach((el) => (el.style.height = "auto"));
 
-    // 2. Находим максимальную высоту
     elements.forEach((el) => {
         if (el.offsetHeight > maxHeight) {
             maxHeight = el.offsetHeight;
         }
     });
 
-    // 3. Устанавливаем всем элементам одинаковую высоту
     elements.forEach((el) => (el.style.height = maxHeight + "px"));
 }
 
-// Вызываем функцию после загрузки контента
 window.addEventListener("load", equalizeHeights);
 window.addEventListener("resize", equalizeHeights);
-// document.querySelectorAll('a[href^="#"').forEach((link) => {
-//     link.addEventListener("click", function (e) {
-//         e.preventDefault();
 
-//         let href = this.getAttribute("href").substring(1);
-
-//         const scrollTarget = document.getElementById(href);
-
-//         const topOffset = 30;
-//         const elementPosition = scrollTarget.getBoundingClientRect().top;
-//         const offsetPosition = elementPosition - topOffset;
-
-//         window.scrollBy({
-//             top: offsetPosition,
-//             behavior: "smooth",
-//         });
-//     });
-// });
-
+// tabs ==========
 const tabButtons = document.querySelectorAll(".body-sertificates__buttons-item");
 const tabContents = document.querySelectorAll(".body-sertificates__item");
 
@@ -81,8 +85,7 @@ if (tabButtons && tabContents) {
     });
 }
 
-// showmore
-
+// showmore ==========
 const certificatesShowMore = document.querySelector(".body-sertificates__showmore");
 const teamsShowMore = document.querySelector(".body-teams__showmore");
 
@@ -108,3 +111,26 @@ certificatesShowMore.addEventListener("click", function (event) {
 teamsShowMore.addEventListener("click", function (event) {
     showMore(hiddenElementsTeams, event);
 });
+
+// dropdown
+
+document.querySelector(".dropdown-button").addEventListener("click", function () {
+    document.getElementById("dropdown").classList.toggle("show");
+    this.classList.toggle("active");
+});
+
+window.onclick = function (event) {
+    if (
+        !event.target.matches(".dropdown-button") &&
+        !event.target.matches(".dropdown-button-icon")
+    ) {
+        let dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+            let openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+                openDropdown.classList.remove("show");
+                document.querySelector(".dropdown-button").classList.remove("active");
+            }
+        }
+    }
+};

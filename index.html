@@ -19,10 +19,28 @@
                     <div class="body-header__inner">
                         <nav>
                             <ul class="body-header__list">
-                                <li class="body-header__item p1"><a href="body-header__link">Выгодно</a></li>
-                                <li class="body-header__item p1"><a href="body-header__link">Услуги и товары</a></li>
-                                <li class="body-header__item p1"><a href="body-header__link">Контакты</a></li>
-                                <li class="body-header__item p1"><a href="body-header__link">Еще</a></li>
+                                <li class="body-header__item p1"><a href="#promo" class="body-header__link">Выгодно</a></li>
+                                <li class="body-header__item p1"><a href="#services" class="body-header__link">Услуги и товары</a></li>
+                                <li class="body-header__item p1"><a href="#contacts" class="body-header__link">Контакты</a></li>
+                                <li class="body-header__item p1">
+                                    <div class="dropdown">
+                                        <button type="button" class="body-header__link dropdown-button">
+                                            Еще
+                                            <svg class="dropdown-button-icon" width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9 1.5L4.93905 5.77479L1 1.5" stroke="#717171" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <div id="dropdown" class="dropdown-content">
+                                            <a href="#about">О компании</a>
+                                            <a href="#stages">Этапы работы</a>
+                                            <a href="#teams">Наша команда</a>
+                                            <a href="#reviews">Отзывы</a>
+                                            <a href="#works">Работы</a>
+                                            <a href="#certificates">Сертификаты</a>
+                                        </div>
+                                    </div>
+
+                                </li>
                             </ul>
                         </nav>
                         <div class="body-header__contacts">
@@ -45,8 +63,34 @@
                     <div class="header__menu menu">
                         <button type="button" class="menu__icon icon-menu"><span></span></button>
                         <nav class="menu__body">
+                            <div class="menu-icon-close">
+
+                            </div>
                             <ul class="menu__list">
-                                <li class="menu__item"><a href="" class="menu__link"></a></li>
+                                <li class="menu__item"><a href="#promo" class="menu__link">Выгодно</a></li>
+                                <li class="menu__item"><a href="#services" class="menu__link">Услуги и товары</a></li>
+                                <li class="menu__item"><a href="#contacts" class="menu__link">Контакты</a></li>
+                                <li class="menu__item"><a href="#about" class="menu__link">О компании</a></li>
+                                <li class="menu__item"><a href="#stages" class="menu__link">Этапы работы</a></li>
+                                <li class="menu__item"><a href="#teams" class="menu__link">Наша команда</a></li>
+                                <li class="menu__item"><a href="#reviews" class="menu__link">Отзывы</a></li>
+                                <li class="menu__item"><a href="#works" class="menu__link">Работы</a></li>
+                                <li class="menu__item"><a href="#certificates" class="menu__link">Сертификаты</a></li>
+                                <li class="body-header__contacts menu-contacts">
+                                    <div class="body-header__socials">
+                                        <a href="#">
+                                            <img src="img/icons/telegram.svg" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/whatsapp.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="body-header__phone">
+                                        <a class="p1" href="tel:+79991234567">
+                                            +7 (999) 123-45-67
+                                        </a>
+                                    </div>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -120,7 +164,7 @@
                     </div>
                 </div>
             </section>
-            <section class="promo block">
+            <section id="promo" class="promo block">
                 <div class="container">
                     <div class="promo__body body-promo">
                         <div class="body-promo__bg"><img src="img/promo/bg.png" alt=""></div>
@@ -133,7 +177,7 @@
                     </div>
                 </div>
             </section>
-            <section class="services block">
+            <section id="services" class="services block">
                 <div class="container">
                     <div class="block-title h2"><span>Услуги и товары</span> нашей компании</div>
                     <div class="services__body body-services">
@@ -240,7 +284,7 @@
                     </div>
                 </div>
             </section>
-            <section class="about block">
+            <section id="about" class="about block">
                 <div class="container">
                     <div class="block-title h2">О <span>компании</span></div>
                     <div class="about__body body-about">
@@ -297,7 +341,7 @@
                     </div>
                 </div>
             </section>
-            <section class="stages block">
+            <section id="stages" class="stages block">
                 <div class="container">
                     <div class="stages__body body-stages">
                         <div class="body-stages__content">
@@ -334,7 +378,7 @@
                     </div>
                 </div>
             </section>
-            <section class="teams block">
+            <section id="teams" class="teams block">
                 <div class="container">
                     <div class="teams__body body-teams">
                         <div class="body-teams__title block-title h2">
@@ -393,7 +437,7 @@
                     </div>
                 </div>
             </section>
-            <section class="reviews block">
+            <section id="reviews" class="reviews block">
                 <div class="container">
                     <div class="block-title h2">Отзывы и благодарности <span>клиентов</span></div>
                     <div class="reviews__slider swiper">
@@ -584,7 +628,7 @@
 
                 </div>
             </section>
-            <section class="works block">
+            <section id="works" class="works block">
                 <div class="container">
                     <div class="block-title h2">Выполненные <span>работы</span></div>
                     <div class="works__slider swiper">
@@ -723,7 +767,7 @@
 
                 </div>
             </section>
-            <section class="sertificates block">
+            <section id="certificates" class="sertificates block">
                 <div class="container">
                     <div class="block-title h2">Сертификаты <span>качества</span></div>
                     <div class="sertificates__body body-sertificates">
@@ -874,7 +918,7 @@
                     </div>
                 </div>
             </section>
-            <section class="request block">
+            <section id="request" class="request block">
                 <div class="container">
                     <div class="request__body body-request">
                         <div class="body-request__inner">
@@ -899,7 +943,7 @@
                     </div>
                 </div>
             </section>
-            <section class="contacts block">
+            <section id="contacts" class="contacts block">
                 <div class="container">
                     <div class="block-title h2"><span>Связаться</span> с нами</div>
                     <div class="contacts__body body-contacts">
@@ -975,4 +1019,4 @@
 
 </html>
 
-<!-- todo: popups, showmore, burger, services (поставить контент + исправить всё и showmore) -->
+<!-- todo: popups, showmore -->
