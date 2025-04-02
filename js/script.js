@@ -88,11 +88,16 @@ if (tabButtons && tabContents) {
 // showmore ==========
 const certificatesShowMore = document.querySelector(".body-sertificates__showmore");
 const teamsShowMore = document.querySelector(".body-teams__showmore");
+const servicesShowMore = document.querySelector(".item-body-services__showmore");
 
 const hiddenElementsCertificates = document.querySelectorAll(
     ".body-sertificates__buttons-item.hidden"
 );
 const hiddenElementsTeams = document.querySelectorAll(".item-teams.hidden");
+
+const hiddenElementsServices = document.querySelectorAll(
+    ".item-body-services__attribute.hidden"
+);
 
 function showMore(elementList, event) {
     const isHidden = elementList[0].classList.contains("hidden");
@@ -110,6 +115,10 @@ certificatesShowMore.addEventListener("click", function (event) {
 
 teamsShowMore.addEventListener("click", function (event) {
     showMore(hiddenElementsTeams, event);
+});
+
+servicesShowMore.addEventListener("click", function (event) {
+    showMore(hiddenElementsServices, event);
 });
 
 // dropdown
